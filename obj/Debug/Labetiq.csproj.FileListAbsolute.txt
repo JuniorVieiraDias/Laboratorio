@@ -50,3 +50,13 @@ C:\Users\Programacao\Documents\Visual Studio 2008\Projects\Labetiq\Labetiq\Labet
 C:\Users\Programacao\Documents\Visual Studio 2008\Projects\Labetiq\Labetiq\Labetiq\obj\Debug\Labetiq.Form1.resources
 C:\Users\Programacao\Documents\Visual Studio 2008\Projects\Labetiq\Labetiq\Labetiq\obj\Debug\Labetiq.Properties.Resources.resources
 C:\Users\Programacao\Documents\Visual Studio 2008\Projects\Labetiq\Labetiq\Labetiq\obj\Debug\Labetiq.csproj.GenerateResource.Cache
+C:\Users\h013026\Documents\GitHub\Laboratorio\bin\Debug\Labetiq.exe
+C:\Users\h013026\Documents\GitHub\Laboratorio\bin\Debug\Labetiq.pdb
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Debug\Labetiq.Form1.resources
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Debug\Labetiq.Properties.Resources.resources
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Debug\Labetiq.csproj.GenerateResource.cache
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Debug\Labetiq.csproj.CoreCompileInputs.cache
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Debug\Labetiq.csproj.CopyComplete
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Debug\Labetiq.exe
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Debug\Labetiq.pdb
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Debug\Labetiq.csprojResolveAssemblyReference.cache

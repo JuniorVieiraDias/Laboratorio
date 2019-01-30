@@ -38,3 +38,14 @@ C:\Users\Programacao\Documents\Visual Studio 2008\Projects\Labetiq\Labetiq\Labet
 C:\Users\Programacao\Documents\Visual Studio 2008\Projects\Labetiq\Labetiq\Labetiq\obj\Release\Labetiq.csproj.GenerateResource.Cache
 C:\Users\Programacao\Documents\Visual Studio 2008\Projects\Labetiq\Labetiq\Labetiq\obj\Release\Labetiq.exe
 C:\Users\Programacao\Documents\Visual Studio 2008\Projects\Labetiq\Labetiq\Labetiq\obj\Release\Labetiq.pdb
+C:\Users\h013026\Documents\GitHub\Laboratorio\bin\Release\Labetiq.exe
+C:\Users\h013026\Documents\GitHub\Laboratorio\bin\Release\Labetiq.pdb
+C:\Users\h013026\Documents\GitHub\Laboratorio\bin\Release\GenCode128.dll
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Release\Labetiq.csprojResolveAssemblyReference.cache
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Release\Labetiq.Form1.resources
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Release\Labetiq.Properties.Resources.resources
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Release\Labetiq.csproj.GenerateResource.cache
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Release\Labetiq.csproj.CoreCompileInputs.cache
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Release\Labetiq.csproj.CopyComplete
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Release\Labetiq.exe
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\Release\Labetiq.pdb
