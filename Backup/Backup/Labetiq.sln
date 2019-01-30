@@ -1,8 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.1
-MinimumVisualStudioVersion = 10.0.40219.1
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labetiq", "Labetiq.csproj", "{ECEB4662-7FE0-4872-AF28-05B7F5F25C92}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EtiqExames", "..\EtiqExames\EtiqExames.vdproj", "{6EF7B111-1666-4474-8F68-3B5E4C614DCF}"
@@ -22,8 +20,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {00A83347-11E4-4395-AF2B-921F072E98AB}
 	EndGlobalSection
 EndGlobal
