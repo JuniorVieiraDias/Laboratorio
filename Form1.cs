@@ -194,6 +194,16 @@ namespace Labetiq
                             printDocument1.Print();
 
                         }
+                        if (detiq.CodExameURO2 != "")
+                        {
+                            printDocument1.Print();
+
+                        }
+                        if (detiq.CodExameURO_ET_22 != "")
+                        {
+                            printDocument1.Print();
+
+                        }
                         if (detiq.CodExameURO_CR4 != "")
                         {
                             printDocument1.Print();
@@ -5595,6 +5605,18 @@ namespace Labetiq
                         g.DrawString("URO FR", new Font("Arial", 8, FontStyle.Bold), System.Drawing.Brushes.Black, startXCenter + 50, starty + 71);
                         g.DrawString(detiq.CodExameURO_ET_2, new Font("Arial", 6, FontStyle.Bold), System.Drawing.Brushes.Black, startXCenter + 0, starty + 83);
                         detiq.CodExameURO_ET_2 = "";
+                    }
+                    else if (detiq.CodExameURO2 != "")
+                    {
+                        g.DrawString("URO FR", new Font("Arial", 8, FontStyle.Bold), System.Drawing.Brushes.Black, startXCenter + 50, starty + 71);
+                        g.DrawString(detiq.CodExameURO2, new Font("Arial", 6, FontStyle.Bold), System.Drawing.Brushes.Black, startXCenter + 0, starty + 83);
+                        detiq.CodExameURO2 = "";
+                    }
+                    else if (detiq.CodExameURO_ET_22 != "")
+                    {
+                        g.DrawString("URO FR", new Font("Arial", 8, FontStyle.Bold), System.Drawing.Brushes.Black, startXCenter + 50, starty + 71);
+                        g.DrawString(detiq.CodExameURO_ET_22, new Font("Arial", 6, FontStyle.Bold), System.Drawing.Brushes.Black, startXCenter + 0, starty + 83);
+                        detiq.CodExameURO_ET_22 = "";
                     }
                     else if (detiq.CodExameURO_CR4 != "")
                     {
