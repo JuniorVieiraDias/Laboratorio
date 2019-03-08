@@ -1,0 +1,11 @@
+C:\Users\h013026\Documents\GitHub\Laboratorio\bin\x86\Release\Labetiq.exe
+C:\Users\h013026\Documents\GitHub\Laboratorio\bin\x86\Release\Labetiq.pdb
+C:\Users\h013026\Documents\GitHub\Laboratorio\bin\x86\Release\GenCode128.dll
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\x86\Release\Labetiq.Form1.resources
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\x86\Release\Labetiq.Properties.Resources.resources
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\x86\Release\Labetiq.csproj.GenerateResource.cache
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\x86\Release\Labetiq.csproj.CoreCompileInputs.cache
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\x86\Release\Labetiq.csproj.CopyComplete
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\x86\Release\Labetiq.exe
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\x86\Release\Labetiq.pdb
+C:\Users\h013026\Documents\GitHub\Laboratorio\obj\x86\Release\Labetiq.csprojAssemblyReference.cache

@@ -2047,13 +2047,26 @@ namespace Labetiq
             get { return codExameURO; }
             set { codExameURO = value; }
         }
-        private String codExameURO_ET_2;
+        private String codExameURO2;
 
+        public String CodExameURO2
+        {
+            get { return codExameURO2; }
+            set { codExameURO2 = value; }
+        }
+       
+        private String codExameURO_ET_2;
         public String CodExameURO_ET_2
         {
             get { return codExameURO_ET_2; }
             set { codExameURO_ET_2 = value; }
-        } 
+        }
+        private String codExameURO_ET_22;
+        public String CodExameURO_ET_22
+        {
+            get { return codExameURO_ET_22; }
+            set { codExameURO_ET_22 = value; }
+        }
 
         private String codExameURO_CR4;
 

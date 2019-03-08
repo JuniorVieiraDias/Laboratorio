@@ -396,6 +396,7 @@ namespace Labetiq
             #endregion
 
             string exmURO = "";
+            string exmURO2 = "";
             string exmURO_CR4 = "";
             string exmIMU_Amarelo = "";
             string exmIMU_U12 = "";
@@ -1366,10 +1367,10 @@ namespace Labetiq
                         #region BIO
 
                         //RPC
-                        else if (dr1.GetString(1) == "BIO" && dr1.GetString(0) == "RPC")
+                       /* else if (dr1.GetString(1) == "BIO" && dr1.GetString(0) == "RPC")
                         {
                             exmBIO_FR_RPC += dr1.GetString(0) + " ";
-                        }
+                        }*/
 
 
                         else if (dr1.GetString(1) == "BIO" && dr1.GetString(0) == "AU6" || dr1.GetString(0) == "A24"
@@ -1477,16 +1478,29 @@ namespace Labetiq
                         #endregion
                         #region URO
 
-                        else if (dr1.GetString(1) == "URO" && dr1.GetString(0) == "DE4"
-                            || dr1.GetString(0) == "EM2" || dr1.GetString(0) == "GR2" || dr1.GetString(0) == "UI8" || dr1.GetString(0) == "UI9" || dr1.GetString(0) == "U12")
+                        else if (dr1.GetString(0) == "DE4" || dr1.GetString(0) == "GR2" || dr1.GetString(0) == "U12"|| dr1.GetString(0) == "RPC" || dr1.GetString(0) == "PE2" || dr1.GetString(0) == "CI2" || dr1.GetString(0) == "ON2" || dr1.GetString(0) == "PC2" || dr1.GetString(0) == "MII")
                         {
-                            exmURO += dr1.GetString(0) + " ";
+                             exmURO += dr1.GetString(0) ;
+                            var selectedArr = new List<String> { "U12", "CI2", "ON2", "PC2", "PE2","MII", "RPC" ,"DE4","GR2" };
+                            var unorderArr = exmURO.Split(' ');
+         
+                            var orderedArr = unorderArr.OrderBy(o => selectedArr.IndexOf(o));
+                            exmURO = "";
+                            foreach (string  items in orderedArr)
+                            {
+                                
+                                exmURO += items + " ";  
+                            }
+                        }
+                        else if (dr1.GetString(1) == "URO" && dr1.GetString(0) == "EM2")
+                        {
+                            exmURO2 += dr1.GetString(0) + " ";
                         }
                         else if (dr1.GetString(1) == "URO" && dr1.GetString(0) == "CR4")
                         {
                             exmURO_CR4 += dr1.GetString(0) + " ";
                         }
-
+                        
                         #endregion
                         #region IMU
                         else if
@@ -1512,12 +1526,12 @@ namespace Labetiq
                         {
                             exmIMU_U24 += dr1.GetString(0) + " ";
                         }
-                        else if (dr1.GetString(1) == "IMU" && dr1.GetString(0) == "MII")
+                       /* else if (dr1.GetString(1) == "IMU" && dr1.GetString(0) == "MII")
                         {
                             exmIMU_COU += dr1.GetString(0) + " ";
 
 
-                        }
+                        }*/
                         else if (dr1.GetString(1) == "IMU" && dr1.GetString(0) == "WB2")
                         {
                             exmIMU_RO += dr1.GetString(0) + " ";
@@ -1536,7 +1550,7 @@ namespace Labetiq
                         }
 
 
-                        else if (dr1.GetString(1) == "HOR" && dr1.GetString(0) == "VID" || dr1.GetString(0) == "AFL"
+                        else if (dr1.GetString(1) == "HOR" && ( dr1.GetString(0) == "AFL" || dr1.GetString(0) == "VI1" 
                             || dr1.GetString(0) == "ATP" || dr1.GetString(0) == "HBG" || dr1.GetString(0) == "GC1" || dr1.GetString(0) == "COT"
                             || dr1.GetString(0) == "CON" || dr1.GetString(0) == "COO" || dr1.GetString(0) == "CO8" || dr1.GetString(0) == "CTS"
                             || dr1.GetString(0) == "DEA" || dr1.GetString(0) == "FRR" || dr1.GetString(0) == "TT4" || dr1.GetString(0) == "TT3"
@@ -1546,7 +1560,7 @@ namespace Labetiq
                             || dr1.GetString(0) == "T10" || dr1.GetString(0) == "T11" || dr1.GetString(0) == "T12" || dr1.GetString(0) == "T04"
                             || dr1.GetString(0) == "T15" || dr1.GetString(0) == "T05" || dr1.GetString(0) == "T03" || dr1.GetString(0) == "T01"
                             || dr1.GetString(0) == "T16" || dr1.GetString(0) == "T02" || dr1.GetString(0) == "TBC" || dr1.GetString(0) == "TLC"
-                            || dr1.GetString(0) == "TE5" || dr1.GetString(0) == "TL4" || dr1.GetString(0) == "HST" || dr1.GetString(0) == "12B")// || dr1.GetString(0) == "PT3" 
+                            || dr1.GetString(0) == "TE5" || dr1.GetString(0) == "TL4" || dr1.GetString(0) == "HST" || dr1.GetString(0) == "12B"))// || dr1.GetString(0) == "PT3" 
                         {
 
                             exmHOR += dr1.GetString(0) + " ";
@@ -1561,7 +1575,7 @@ namespace Labetiq
                         #endregion
                         #region HEM
                         else if (dr1.GetString(1) == "HEM" && dr1.GetString(0) == "HM2" || dr1.GetString(0) == "HH2"
-                             || dr1.GetString(0) == "PE2" || dr1.GetString(0) == "PQ2" || dr1.GetString(0) == "PF2"
+                              || dr1.GetString(0) == "PQ2" || dr1.GetString(0) == "PF2"
                              || dr1.GetString(0) == "RT2" || dr1.GetString(0) == "VH2" || dr1.GetString(0) == "VHS")
                         {
                             exmHEM_Rox += dr1.GetString(0) + " "; // continuar daqui TODO: 23/03/2015
@@ -1573,8 +1587,8 @@ namespace Labetiq
                         {
                             exmHEM_Azul += dr1.GetString(0) + " "; //EXAME DD2 mudou para DD4
                         }
-                        else if (dr1.GetString(1) == "HEM" && dr1.GetString(0) == "PA2" || dr1.GetString(0) == "CI2"
-                            || dr1.GetString(0) == "ON2" || dr1.GetString(0) == "EOS" || dr1.GetString(0) == "PC2")
+                        else if (dr1.GetString(1) == "HEM" && dr1.GetString(0) == "PA2" 
+                             || dr1.GetString(0) == "EOS" )
                         {
                             exmHEM_DI += dr1.GetString(0) + " ";
                         }
@@ -2148,9 +2162,12 @@ namespace Labetiq
 
 
                     #endregion
-
+                    // Etiquetas para URO FR U12 c12 ON2 PC2 PE2 MII RPC DE4
                     detiq.CodExameURO = exmURO;
                     detiq.CodExameURO_ET_2 = exmURO;
+                    // Etiquetas para URO FR EM2
+                    detiq.CodExameURO2 = exmURO2;
+                    detiq.CodExameURO_ET_22 = exmURO2;
                     detiq.CodExameURO_CR4 = exmURO_CR4;
                     detiq.CodExameIMU_Amarelo = exmIMU_Amarelo;
                     detiq.CodExameIMU_U12 = exmIMU_U12;
