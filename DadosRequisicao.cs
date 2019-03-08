@@ -2056,6 +2056,7 @@ namespace Labetiq
         }
        
         private String codExameURO_ET_2;
+
         public String CodExameURO_ET_2
         {
             get { return codExameURO_ET_2; }
