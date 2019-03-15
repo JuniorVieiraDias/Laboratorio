@@ -1543,10 +1543,10 @@ namespace Labetiq
                         #endregion
                         #region HOR
                         // PT3 //  agora é PT5 Ele vai sair em 2 etiquetas 1 junto aos demais exames de HOR e 1 sozinho como exame externo Amarelo
-                        else if (dr1.GetString(1) == "HOR" && dr1.GetString(0) == "PT5")
+                        else if (dr1.GetString(1) == "HOR" && dr1.GetString(0) == "PT6")
                         {
                             exmHOR_PT3 = dr1.GetString(0);
-                            exmHOR += "PT5 ";
+                            exmHOR += "PT6 ";
                         }
 
 
