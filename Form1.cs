@@ -51,13 +51,13 @@ namespace Labetiq
         private void btnImprimir_Click(object sender, EventArgs e)
         {
 
-            // printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
-           // printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
-           // printDialog1.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+             //printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+           printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+           printDialog1.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
 
             // teste Comprovante
-           //  printDocument2.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
-            // printDialog2.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+            printDocument2.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+             printDialog2.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
 
             // foi criado para escolher impressora para imprimir comprovante paciente
             // onde está else if (checkBoxEscolherImpressora.Checked == true)
@@ -5572,8 +5572,8 @@ namespace Labetiq
         {
             DateTime data = DateTime.Now;
             e.PageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);//900 é a largura da página
-            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
-            printDialog1.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+            //printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+           // printDialog1.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
             using (Graphics g = e.Graphics)
             {
                 using (Font fnt = new Font("Arial", 14)) // antes estava 12
@@ -7868,8 +7868,8 @@ namespace Labetiq
 
             string data = DateTime.Now.ToShortDateString();
             e.PageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);//900 é a largura da página
-            printDocument2.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
-            printDialog2.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+            //printDocument2.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+            //printDialog2.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
             using (Graphics g = e.Graphics)
             {
                 using (Font fnt = new Font("Arial", 14)) // antes estava 12
