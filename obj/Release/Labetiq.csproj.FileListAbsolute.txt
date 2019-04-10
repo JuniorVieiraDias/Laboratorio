@@ -38,3 +38,5 @@ C:\Users\Programacao\Documents\Visual Studio 2008\Projects\Labetiq\Labetiq\Labet
 C:\Users\Programacao\Documents\Visual Studio 2008\Projects\Labetiq\Labetiq\Labetiq\obj\Release\Labetiq.csproj.GenerateResource.Cache
 C:\Users\Programacao\Documents\Visual Studio 2008\Projects\Labetiq\Labetiq\Labetiq\obj\Release\Labetiq.exe
 C:\Users\Programacao\Documents\Visual Studio 2008\Projects\Labetiq\Labetiq\Labetiq\obj\Release\Labetiq.pdb
+C:\Users\h013027\Documents\GitHub\Laboratorio\obj\Release\Labetiq.exe
+C:\Users\h013027\Documents\GitHub\Laboratorio\obj\Release\Labetiq.pdb

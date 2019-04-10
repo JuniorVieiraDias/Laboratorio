@@ -24,25 +24,40 @@ namespace Labetiq
 
         public Form1()
         {
+            try
+            {
+                InitializeComponent();
+                status = 0;
+                error = "";
 
-            InitializeComponent();
-            status = 0;
-            error = "";
+                // printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+                //printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+                //printDialog1.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
 
-            // printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
-            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
-            printDialog1.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+                // teste Comprovante
+               // printDocument2.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+               // printDialog2.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
 
-            // teste Comprovante
-            printDocument2.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
-            printDialog2.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
-
-
+            }
+     
+            catch (Exception ex)
+            {
+                string mensagem = ex.Message;
+               
+            }
         }
 
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+
+            // printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+           // printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+           // printDialog1.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+
+            // teste Comprovante
+           //  printDocument2.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+            // printDialog2.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
 
             // foi criado para escolher impressora para imprimir comprovante paciente
             // onde está else if (checkBoxEscolherImpressora.Checked == true)
@@ -71,6 +86,8 @@ namespace Labetiq
                 this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
 
             }
+          
+        
 
             btnImprimir.Enabled = false;
         }
@@ -87,7 +104,7 @@ namespace Labetiq
             if (status == 1)
                 lblError.Text = error;
             else
-                lblError.ResetText();
+                this.lblError.ResetText();
             this.txbRequis.ResetText();
             this.txbRequis.Enabled = true;
             this.txbRequis.Focus();
@@ -154,11 +171,11 @@ namespace Labetiq
                 {
 
 
-                    printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110); //("Custom2", 200, 110.old)
-                    printDialog1.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+                    //printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110); //("Custom2", 200, 110.old)
+                    //printDialog1.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
                     // teste comprovante
-                    printDocument2.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110); //("Custom2", 200, 110.old)
-                    printDialog2.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
+                    //printDocument2.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110); //("Custom2", 200, 110.old)
+                    //printDialog2.PrinterSettings.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
 
 
 
@@ -1637,8 +1654,8 @@ namespace Labetiq
                         {
                             detiq.ComprovantePaciente1 = "";
                         }
-                        _requis = null;
-                        //limpar dados do paciente
+                        
+                        /*limpar dados do paciente
                         detiq.Nome = "";
                         detiq.TipoPac = "";
                         detiq.Idade = "";
@@ -1650,7 +1667,25 @@ namespace Labetiq
                         detiq.HoraExm = "";
                         detiq.DtNascRH = "";
                         detiq.DtNascBE = "";
+
+                        // Teste Junior 05/04/2019
+                     //   txbRequis = null;
                         detiq.NovaImagem1 = null;
+                       // detiq = null; // Junior 08.04.2019
+
+                        /*try
+                        {
+                            
+                            Application.Restart();
+                            detiq = null;
+
+                        }
+                        catch (Exception )
+                        {
+                            //MessageBox.Show(ex.Message);
+                            
+                            
+                        }*/
 
                         
                         //MessageBox.Show("FIM DO PROGRAMA");
@@ -1731,6 +1766,30 @@ namespace Labetiq
                             else
                                 detiq.CodExameURO_ET_2 = "";
                             //********************************************************//
+                            if (detiq.CodExameURO2 != "" && checkBoxURO.Checked == true)
+                            {
+                                DialogResult confirm = MessageBox.Show(detiq.CodExameURO2, "URO", MessageBoxButtons.YesNo);
+                                if (confirm.ToString().ToUpper() == "YES")
+
+                                    printDocument1.Print();
+                                else
+                                    detiq.CodExameURO2 = "";
+                            }
+                            else
+                                detiq.CodExameURO2 = "";
+                            //********************************************************//
+                            if (detiq.CodExameURO_ET_22 != "" && checkBoxURO.Checked == true)
+                            {
+                                DialogResult confirm = MessageBox.Show(detiq.CodExameURO_ET_22, "URO", MessageBoxButtons.YesNo);
+                                if (confirm.ToString().ToUpper() == "YES")
+
+                                    printDocument1.Print();
+                                else
+                                    detiq.CodExameURO_ET_22 = "";
+                            }
+                            else
+                                detiq.CodExameURO_ET_22 = "";
+                            //********************************************************//
                             if (detiq.CodExameURO_CR4 != "" && checkBoxURO.Checked == true)
                             {
                                 DialogResult confirm = MessageBox.Show(detiq.CodExameURO_CR4, "URO", MessageBoxButtons.YesNo);
@@ -1748,7 +1807,7 @@ namespace Labetiq
                             #region EXT
                             // PT3 //agora é PT5 Ele vai sair em 2 etiquetas 1 junto aos demais exames de HOR e 1 sozinho como exame externo Amarelo
                             // ESSE EXAME PERTENCE AO GRUPO HOR MAS ESSA COPIA TEM QUE SAIR COM ETIQUETA EXT AMARELO
-                            if (detiq.CodExameHOR_PT3 != "" && checkBoxEXT.Checked == true && mnemonico == "PT5" || (detiq.CodExameHOR_PT3 != "" && checkBoxEXT.Checked == true && mnemonico == "000"))
+                            if (detiq.CodExameHOR_PT3 != "" && checkBoxEXT.Checked == true && mnemonico == "PT6" || (detiq.CodExameHOR_PT3 != "" && checkBoxEXT.Checked == true && mnemonico == "000"))
                             {
                                 DialogResult confirm = MessageBox.Show(detiq.CodExameHOR_PT3, "EXT AM", MessageBoxButtons.YesNo);
                                 if (confirm.ToString().ToUpper() == "YES")
@@ -5496,9 +5555,11 @@ namespace Labetiq
                 }
                 else
                 {
-                    MessageBox.Show("Requisição sem exames cadastrados! ");
+                    MessageBox.Show("Número de requisição não existe! ");
                 }
                 status = 0;
+                _requis = null;
+                detiq = null; // alteracao 05.04.2019  henrique
             }
             catch (Exception ex)
             {
@@ -7782,17 +7843,19 @@ namespace Labetiq
 
                     e.Graphics.DrawImage(detiq.NovaImagem1, x, y, width, height);
                     
-
-
+                  
 
 
                 }
 
 
-
+                //e.Graphics.DrawImage();
             }
         }
         //Fim do print1
+
+        
+        
 
         #region Print2 comprovante paciente
 
@@ -7926,9 +7989,16 @@ namespace Labetiq
 
 
             }
-
+        
         }
 
+        private void txbRequis_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = Char.ToUpper(e.KeyChar);
+        }
+        // limpar aqui
+
+        
 
 
     }

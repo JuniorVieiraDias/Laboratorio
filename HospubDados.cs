@@ -389,6 +389,7 @@ namespace Labetiq
             string exmBIO_CIP = "";
             string exmBIO_CID_0_120 = "";
             string exmBIO_CID_0_300 = "";
+            
             string exmBIO_CI_0_120 = "";
             string exmBIO_CI_0_60 = "";
             string exmBIO_CI_0_180 = "";
@@ -2283,8 +2284,9 @@ namespace Labetiq
 
                     dr1.Close();
                 }
+                
                 dr.Close();
-
+                detiq = null;
                 commd.Connection.Close();
 
             }

@@ -106,10 +106,11 @@
             // txbRequis
             // 
             this.txbRequis.Location = new System.Drawing.Point(168, 46);
-            this.txbRequis.Mask = "00,AA,0,000000";
+            this.txbRequis.Mask = "00,LL,0,000000";
             this.txbRequis.Name = "txbRequis";
             this.txbRequis.Size = new System.Drawing.Size(93, 20);
             this.txbRequis.TabIndex = 4;
+            this.txbRequis.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbRequis_KeyPress);
             // 
             // checkBoxImprUnica
             // 
@@ -372,7 +373,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "ETIQUETA LABORATÓRIO  EXAMES V-32";
+            this.Text = "ETIQUETA LABORATÓRIO  EXAMES V-35  ------  08.04.19";
             this.Enter += new System.EventHandler(this.btnImprimir_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
