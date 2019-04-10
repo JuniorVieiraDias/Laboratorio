@@ -2286,7 +2286,7 @@ namespace Labetiq
                 }
                 
                 dr.Close();
-                detiq = null;
+                
                 commd.Connection.Close();
 
             }

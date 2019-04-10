@@ -5555,7 +5555,7 @@ namespace Labetiq
                 }
                 else
                 {
-                    MessageBox.Show("Número de requisição não existe! ");
+                    MessageBox.Show("Requisição sem exames cadastrados! ");
                 }
                 status = 0;
                 _requis = null;
