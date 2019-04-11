@@ -29,6 +29,7 @@ namespace Labetiq
                 InitializeComponent();
                 status = 0;
                 error = "";
+                txbRequis.Select();
 
                 // printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
                 //printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom2", 203, 110);
